@@ -3,3 +3,5 @@
 # d = 7
 # Функция Леви
 
+def f(x:list[float|int], d) -> float|int:
+    return 0.5 * sum(x[i] ** 4 - 16 * x[i] ** 2 + 5 * x[i] for i in range(d))
