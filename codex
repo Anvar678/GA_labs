@@ -1,0 +1,83 @@
+# --- Дрифт ---
+"%LOCALAPPDATA%\Programs\drift\drift.exe" --showcase  # cmd
+
+& "$env:LOCALAPPDATA\Programs\drift\drift.exe" --showcase  # powwershell
+& "$env:LOCALAPPDATA\Programs\drift\drift.exe" --scene rain
+
+
+# --- запуск кодекса в папке ---
+codex --cd "ПУТЬ_К_ПАПКЕ_в_которой_будет_работать" (pwd)
+codex --cd . --profile read # запуск с текущей папки
+
+--sandbox read-only
+--sandbox workspace-write
+--sandbox danger-full-access
+
+--ask-for-approval on-request
+--ask-for-approval never
+--ask-for-approval untrusted
+
+--add-dir "C:\Some\Other\Folder"
+
+--model gpt-5.4/per
+
+# --- Готовые варинаты ---
+
+# Быстрый ответ + статус
+codex --cd "C:\Users\anvar\OneDrive\Рабочий стол\Labi_GA" --model gpt-5.6-luna --sandbox read-only --ask-for-approval on-request --no-alt-screen -c model_reasoning_effort="low" -c model_verbosity="low" -c service_tier="fast" -c "tui.status_line=['model-with-reasoning','permissions','context-used','weekly-limit','used-tokens','total-input-tokens','total-output-tokens','fast-mode']"
+
+# Простетская реализация, уже четко понятная простая правка
+codex --cd "C:\Users\anvar\OneDrive\Рабочий стол\Labi_GA" --model gpt-5.6-terra --sandbox workspace-write --ask-for-approval never --no-alt-screen -c model_reasoning_effort="medium" -c model_verbosity="low" -c "tui.status_line=['model-with-reasoning','permissions','context-used','weekly-limit','used-tokens','total-input-tokens','total-output-tokens','fast-mode']"
+
+# Основной чат: рассуждение(небольшое) + реализация | когда суть решения проблемы уже ясна или почти ясна
+codex --cd "C:\Users\anvar\OneDrive\Рабочий стол\Labi_GA" --model gpt-5.6-terra --sandbox workspace-write --ask-for-approval never --no-alt-screen -c model_reasoning_effort="high" -c model_verbosity="low" -c "tui.status_line=['model-with-reasoning','permissions','context-used','weekly-limit','used-tokens','total-input-tokens','total-output-tokens','fast-mode']"
+
+# Архитектурные задачи | построение новой фичи, или сильная модернизация слабой
+codex --cd "C:\Users\anvar\OneDrive\Рабочий стол\Labi_GA" --model gpt-5.6-sol --sandbox workspace-write --ask-for-approval never --no-alt-screen -c model_reasoning_effort="high" -c model_verbosity="medium" -c "tui.status_line=['model-with-reasoning','permissions','context-used','weekly-limit','used-tokens','total-input-tokens','total-output-tokens','fast-mode']"
+codex --cd "C:\Users\anvar\OneDrive\Рабочий стол\Labi_GA" --model gpt-5.6-sol --sandbox workspace-write --ask-for-approval never --no-alt-screen -c model_reasoning_effort="xhigh" -c model_verbosity="medium" -c "tui.status_line=['model-with-reasoning','permissions','context-used','weekly-limit','used-tokens','total-input-tokens','total-output-tokens','fast-mode']"
+# --- (архитектура новой фичи НЕ прога)
+codex --cd "C:\Users\anvar\OneDrive\Рабочий стол\Labi_GA" --model gpt-6-astra --sandbox workspace-write --ask-for-approval never --no-alt-screen -c model_reasoning_effort="medium" -c model_verbosity="medium" -c "tui.status_line=['model-with-reasoning','permissions','context-used','weekly-limit','used-tokens','total-input-tokens','total-output-tokens','fast-mode']"
+codex --cd "C:\Users\anvar\OneDrive\Рабочий стол\Labi_GA" --model gpt-6-astra --sandbox workspace-write --ask-for-approval never --no-alt-screen -c model_reasoning_effort="high" -c model_verbosity="medium" -c "tui.status_line=['model-with-reasoning','permissions','context-used','weekly-limit','used-tokens','total-input-tokens','total-output-tokens','fast-mode']"
+codex --cd "C:\Users\anvar\OneDrive\Рабочий стол\Labi_GA" --model gpt-6-astra --sandbox workspace-write --ask-for-approval never --no-alt-screen -c model_reasoning_effort="xhigh" -c model_verbosity="medium" -c "tui.status_line=['model-with-reasoning','permissions','context-used','weekly-limit','used-tokens','total-input-tokens','total-output-tokens','fast-mode']"
+
+# Одна очень сложная задача | как правило аналитика без реализации, реализация даже очень сложной задачи хватит xhigh
+codex --cd "C:\Users\anvar\OneDrive\Рабочий стол\Labi_GA" --model gpt-5.6-sol --sandbox workspace-write --ask-for-approval never --no-alt-screen -c model_reasoning_effort="max" -c model_verbosity="medium" -c "tui.status_line=['model-with-reasoning','permissions','context-used','weekly-limit','used-tokens','total-input-tokens','total-output-tokens','fast-mode']"
+codex --cd "C:\Users\anvar\OneDrive\Рабочий стол\Labi_GA" --model gpt-6-astra --sandbox workspace-write --ask-for-approval never --no-alt-screen -c model_reasoning_effort="max" -c model_verbosity="medium" -c "tui.status_line=['model-with-reasoning','permissions','context-used','weekly-limit','used-tokens','total-input-tokens','total-output-tokens','fast-mode']"
+
+# Комплексная задача которая бьется на подзадачи.
+codex --cd "C:\Users\anvar\OneDrive\Рабочий стол\Labi_GA" --model gpt-5.6-sol --sandbox workspace-write --ask-for-approval never --no-alt-screen -c model_reasoning_effort="ultra" -c model_verbosity="medium" -c "tui.status_line=['model-with-reasoning','permissions','context-used','weekly-limit','used-tokens','total-input-tokens','total-output-tokens','fast-mode']"
+codex --cd "C:\Users\anvar\OneDrive\Рабочий стол\Labi_GA" --model gpt-6-astra --sandbox workspace-write --ask-for-approval never --no-alt-screen -c model_reasoning_effort="ultra" -c model_verbosity="medium" -c "tui.status_line=['model-with-reasoning','permissions','context-used','weekly-limit','used-tokens','total-input-tokens','total-output-tokens','fast-mode']"
+
+# Поиск в интернете
+codex --cd "C:\Users\anvar\OneDrive\Рабочий стол\Labi_GA" --model gpt-5.6-terra --sandbox read-only --ask-for-approval on-request --search --no-alt-screen -c model_reasoning_effort="high" -c model_verbosity="medium" -c "tui.status_line=['model-with-reasoning','permissions','context-used','weekly-limit','used-tokens','total-input-tokens','total-output-tokens','fast-mode']"
+
+/resume # все чаты
+/status
+/permissions # менять режим (чтение запись и пр)
+
+
+Продолжи с текущего места и доделай начатую задачу до конца.
+Без нового рефакторинга и без расширения scope.
+Меняй только уже затронутые файлы.
+В конце: что сделано, какие файлы изменены, что осталось.
+
+Рекламный анализ:
+Мне нужно пустить рекламу проекта. Условия :
+    1) Аудитория ДНДшеров (игроки в DND RPG и прочие ролевки)
+    2) телеграм канал
+    3) Аудитория от 3000 до 10000 человек (можно с небольшими погрешностями в одну и другую стороны) и средние просмотры на посте от 1500
+    4) Телеграм канал активен, ссылка кликабельна
+    5) Канал точно принимает сообщения (можно либо написать каналу, либо есть явный админ, которому можно написать)
+    6) Канал точно размещает рекламу. Для этого нужно проанализировать вообще все его посты на наличие рекламных постов
+    7) Последний пост не позднее одного месяца давности
+    8) При ответе давай прямую ссылку на нужный канал
+Мне нужно топ 10 наиболее релевантных каналов, отправь мне их в формате красивого и читабельного списка.
+Каналы которые уже были отсмотрены и заново их мне высылать не нужно:
+Фабрика игр; Настолки Live - просто об играх; Фаербол - Данька обо всем; Новости настольных игр Таверна у картогрофа Литературный продукт Warhammer 15%
+
+ Продолжи поиск по тем же критериям что я описал выше. Но в таблицу еще дополнительно впиши аудиторию тг канала (число подписчиков) и медианное число просмотров на посте за ~1 день. Адуитория настольщики и что-то около того (не
+  обязаительно прям чисто настольщики). Жду топ 10 каналов в таблице. В таблице так же строки разделяй линией а не просто пустотой
+
+
+Итак, сейчас основная проблема бесконечной памяти заключается в update_fact_metrics. Вместо того чтобы менять как минимум описнаие фактов она просто выводит null, всегда, даже когда в запросе я явно пишу новую важную информацию,
+  которую НУЖНО интегрировать в факт. Я не понимаю почему. Проанализируй весь код, прове
