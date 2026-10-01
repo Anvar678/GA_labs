@@ -1,0 +1,5 @@
+﻿configuration,constraint_method,mutation,population_size,generations,mutation_probability,vertex_count,towers_count,graph_seed,edge_probability,elitism,selection_percent,penalty_value,runs_count
+repair_bit,repair,bit,100,100,5,30,5,1400,10,10,70,31,20
+penalty_bit,penalty,bit,100,100,5,30,5,1400,10,10,70,31,20
+repair_swap,repair,swap,100,100,5,30,5,1400,10,10,70,31,20
+penalty_swap,penalty,swap,100,100,5,30,5,1400,10,10,70,31,20
