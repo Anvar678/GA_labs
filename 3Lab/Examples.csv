@@ -1,1 +1,5 @@
-﻿
+﻿name,utility,mass_kg,reliability_percent,valid,equipment,individual
+valid_light,372.0,4.8,68.53566179733,True,Tarp|Pillow|Map|Pot|Medicines,0|1|0|0|0|0|0|0|0|0|1|0|1|0|0|0|0|0|0|0|1|0|0|0|0|1|0|0|0|0
+valid_extended,781.0,9.32,89.09500416327403,True,Tarp|Sleeping_mat|Pillow|Map|Pot|Water_filter|Flask|Medicines|Antiseptic|Splint,0|1|0|0|0|0|0|1|0|0|1|0|1|0|0|0|0|0|0|0|1|1|1|0|0|1|0|1|1|0
+invalid_without_navigation,290.0,2.0700000000000003,0.0,False,Tarp|Pillow|Pot|Medicines,0|1|0|0|0|0|0|0|0|0|1|0|0|0|0|0|0|0|0|0|1|0|0|0|0|1|0|0|0|0
+invalid_overweight,2064.0,57.11,99.99972083480165,False,Tent|Tarp|Bivy|Groundsheet|Tent_repair_kit|Stakes|Sleeping_bag|Sleeping_mat|Liner|Blanket|Pillow|Emergency_bag|Map|Compass|GPS_navigator|Satellite_beacon|Headlamp|Batteries|Gas_stove|Fuel|Pot|Water_filter|Flask|Utensils|First_aid_kit|Medicines|Bandages|Antiseptic|Splint|Thermal_blanket,1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1

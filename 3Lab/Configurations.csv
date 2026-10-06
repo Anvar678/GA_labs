@@ -1,1 +1,4 @@
-﻿
+﻿configuration,algorithm,crossover_type,population_size,generations,mutation_probability,equipment_seed,item_count,category_count,maximum_mass_kg,runs_count,elitism
+nsga_uniform,nsga_ii,uniform,100,300,5,1400,30,5,25.0,20,10
+nsga_one_point,nsga_ii,one_point,100,300,5,1400,30,5,25.0,20,10
+weighted_sum,weighted_sum,uniform,100,300,5,1400,30,5,25.0,20,10
